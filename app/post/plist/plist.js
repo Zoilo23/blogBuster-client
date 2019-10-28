@@ -1,6 +1,7 @@
 var miControlador = miModulo.controller(
     "postPlistController",
     ['$scope', '$http', '$routeParams','$window', function ($scope, $http, $routeParams, $window) {
+        $scope.sitio = 'plist';
         $scope.paginaActual = parseInt($routeParams.page);
         $scope.rppActual = parseInt($routeParams.rpp);
         $scope.rppS = [10,50,100];
