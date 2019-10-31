@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +18,7 @@ body{
     background: #282638;
     margin: 10px auto;
     color: white;
+    height: 100%;
 }
 .container-form{
     width: 100%;
@@ -185,38 +187,6 @@ a{
     border-bottom: 4px solid #5584FF;
 }
 
-
-/*Principal*/
-
-
-.welcome{
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
-            margin-top: 100px;
-            background: rgba(0,0,0,0.6);
-            text-align: center;
-            padding: 20px;
-        }
-
-        .welcome h1{
-            font-size: 50px;
-            color: white;
-            font-weight: 100;
-        }
-        
-        .welcome a{
-            display: block;
-            margin-top: 40px;
-            font-size: 20px;
-            padding: 10px;
-            border: 1px solid white;
-        }
-        
-        .welcome a:hover{
-            color: black;
-            background: white;
-        }
 
      
 
