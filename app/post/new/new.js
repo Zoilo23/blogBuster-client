@@ -1,23 +1,12 @@
 var miControlador = miModulo.controller(
-    "postEditController",
-    ['$scope', '$http', '$routeParams', '$window', '$location', 'promesasService',
-        function ($scope, $http, $routeParams, $window, $location, promesasService) {
+    "postNewController",
+    ['$scope', '$http', '$routeParams', '$window', 'promesasService',
+        function ($scope, $http, $routeParams, $window, promesasService) {
             $scope.id = $routeParams.id;
-            $scope.controller = "postEditController";
+            $scope.controller = "postNewController";
             $scope.fallo = false;
             $scope.hecho = false;
             $scope.falloMensaje = "";
-
-            promesasService.ajaxGet('post', $scope.id)
-                .then(function (response) {
-                    $scope.id = response.data.response.id;
-                    $scope.titulo = response.data.response.titulo;
-                    $scope.cuerpo = response.data.response.cuerpo;
-                    $scope.etiquetas = response.data.response.etiquetas;
-                    $scope.fecha = response.data.response.fecha;
-                }, function (error) {
-                    $scope.fallo = true;
-                });
 
             $scope.modificar = function () {
                 const datos = {
@@ -31,7 +20,7 @@ var miControlador = miModulo.controller(
                     data: JSON.stringify(datos)
                 };
                 $http.defaults.headers.put['Content-Type'] = 'application/json;charset=utf-8';
-                $http.get('http://localhost:8081/blogbuster/json?ob=post&op=update', {
+                $http.get('http://localhost:8081/blogbuster/json?ob=post&op=new', {
                     params: jsonToSend
                 })
                     .then(function (response) {
