@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 <ng-include src="'app/navegador.html'"></ng-include>
-=======
-<ng-include src="'./app/menu.html'"></ng-include>
->>>>>>> 6363a608151c53682cca1dd846e7e2fa49ba7d2d
 <div class="container">
     <h1 class="mb-4">Borrado de post</h1>
     <div ng-if="hecho">
         <div class="alert alert-danger" role="alert" ng-if="fallido">No se ha podido borrar el post</div>
         <div class="alert alert-success" role="alert" ng-if="!fallido">El post se ha borrado con exito</div>
     </div>
-    <table class="table table-bordered table-hover" ng-if="!hecho">
+    <table class="table table-dark table-bordered table-hover" ng-if="!hecho">
         <tr>
             <th>
                 Titulo:
